@@ -24,7 +24,7 @@ const connectToMongoDB = async () => {
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://apex-task-frontend.vercel.app/",
+  "https://apex-task-frontend.vercel.app",
 ];
 
 //middleware
