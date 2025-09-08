@@ -24,7 +24,7 @@ const connectToMongoDB = async () => {
 
 //middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: process.env.FRONTEND || "http://localhost:5173",
 }));
 app.use(express.json());  // this middleware will parse JSON bodies: req.body
 app.use(rateLimiter);
