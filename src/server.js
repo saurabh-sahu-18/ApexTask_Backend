@@ -22,9 +22,14 @@ const connectToMongoDB = async () => {
     }
 }
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://your-vercel-frontend-url.vercel.app", // Add your Vercel URL
+];
+
 //middleware
 app.use(cors({
-  origin: process.env.FRONTEND || "http://localhost:5173",
+  origin: allowedOrigins,
 }));
 app.use(express.json());  // this middleware will parse JSON bodies: req.body
 app.use(rateLimiter);
